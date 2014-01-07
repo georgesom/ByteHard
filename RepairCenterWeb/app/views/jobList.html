@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <!--
+        <div class="col-md-4">
+            <table>
+                <tr>
+                    <td><a href="#/Job/001">Job - 001</a> </td>
+                    <td>Vicki Owens</td>
+                </tr>
+                <tr>
+                    <td>Job - 002</td>
+                    <td>Ricky Sanders</td>
+                </tr>
+            </table>
+        </div> -->
+
+        <div class="col-md-4">
+            <table>
+                <tr ng-repeat="job in jobs">
+                    <td><a ng-href="#/Job/{{job.jobId}}">{{job.jobId}}</a></td>
+                    <td>{{job.contacts.owner.firstName}} {{job.contacts.owner.lastName}}</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <div class="row" style="border-top: 20px;">
+        Job List Page: Controller = {{controllerName}} [$scope.test = {{test}}]
+    </div>
+</div>
+
